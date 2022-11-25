@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang = "ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML 기본 태그</title>
+        <!-- <meta name="description" content=""> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+    </head>
+    
+    <body>
+        <h1>HELLO WORLD - First</h1>
+        <!-- <h2>Second</h2>
+        <h3>Third</h3>
+        <h4>Fourth</h4>
+        <h5>Fifth</h5>
+        <h6>Sixth</h6> -->
+        <span>이 요소는 body의 하위 요소(자식)입니다</span>
+        </br>
+        <p>P is for paragraph</br>
+        모든 태그는 계층화가 이루어져 있습니다. 
+        </p>
+
+        <a href="../20221104/5-anchor.html">Anchor 페이지로 이동하기</a>
+
+        <script>
+            const heading = document.querySelector('h1');
+            const pText = document.querySelector('p');
+            
+            console.log(heading);
+            console.log(pText);
+            
+            heading.addEventListener('click', ()=>{
+                pText.innerText = 'Clicked!';
+            })
+
+        </script>
+
+    </body>
+</html>

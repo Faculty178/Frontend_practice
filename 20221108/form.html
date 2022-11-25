@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- <form name="" action="a.php" method="post"></form> -->
+        <!--disabled / checked / selected / autofocus 속성 기억하기-->
+        <form name="fm" method="post">
+        <input type="text" name="idName" placeholder="id를 입력하세요" 
+        maxlength="15" minlength="5" disabled><br>
+        <!--value에 설명을 써넣지 마시오-->
+        <input type="password" autofocus required placeholder="pw를 입력하세요" name="password"><br>
+        <input type="button" value="확인">
+        <input type="submit" value="전송" name="btn">
+        <input type="reset" value="초기화"><br>
+        <button>이렇게도 쓸 수 있습니다</button>
+        <input type="image" alt="login button" src="./login.jpg"><br>
+        <input type="checkbox" checked="checked" name="hobby" value="테니스">테니스
+        <input type="checkbox" name="hobby" value="배드민턴">배드민턴
+        <input type="checkbox" name="hobby" value="볼링">볼링 <br>
+        <input type="radio" checked="checked" name="email">이메일 수신 허용
+        <input type="radio" name="email">이메일 수신 거부 <br>
+        <input type="file"><br>
+        <textarea rows="5">내용을 입력하세요</textarea> <br>
+        <!--textarea cols를 사용하는것은 권장하지 않음 css width를 쓰는것을 권함 -->
+        <!--form 내부의 대부분의 요소는 inline// br을 써야 함-->
+        <!--<select>-->
+        <select multiple>
+            <option value="HTML">HTML</option>
+            <option value="CSS" selected>CSS</option>
+            <optgroup label="JS">
+                <option value="Javascript">Javascript</option>
+                <option value="Jquery">Jquery</option>
+                <option value="TypeScript">TypeScript</option>
+            </optgroup>
+            <option value="React">React</option>
+        </select> <br>
+        
+        
+    </body>
+</html>

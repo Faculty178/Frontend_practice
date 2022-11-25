@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio&Video</title>
+    <style>
+        video{
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <h1>오디오</h1>
+    <figure>
+        <audio controls>
+            <source src="../HTML5_CSS3/1.기본태그/media/Kalimba.mp3">
+            <!-- <source src="../HTML5_CSS3/1.기본태그/media/Kalimba.ogg"> -->
+            <!--예전에는 확장자 따라 허용하는 브라우저가 달라서 한꺼번에 입력하는 경우가 있었음 -->
+        </audio>
+    </figure>
+    
+    <h1>비디오</h1>
+    <figure>
+        <video controls poster="../HTML5_CSS3/1.기본태그/images/puppy4.jpg">
+            <source src="../HTML5_CSS3/1.기본태그/media/Wildlife.mp4">
+            <!--이미지와 비디오 한정으로 html에서 크기를 변경할 수 있음-->
+            <!--poster 속성은 썸네일-->
+            <!--autoplay / muted / loop-->
+        </video>
+        <figcaption>영상캡션도 추가 가능</figcaption>
+        <br><br>
+
+        <video controls poster="../HTML5_CSS3/1.기본태그/images/fish.jpg">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vZ-RlsCwvwI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </video>
+        <!--유투브 영상은 iframe으로 가져갈 수 있음-->
+
+    </figure>
+
+</body>
+</html>

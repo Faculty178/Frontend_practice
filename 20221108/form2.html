@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 사이트 이동</title>
+</head>
+<body>
+    <h1>커뮤니티 사이트</h1>
+
+    <form>
+        <select name="goSite">
+            <option>이동하려는 항목을 선택하시오</option>
+            <option value="https://www.naver.com/">NAVER</option>
+            <option value="https://www.daum.net/">Daum</option>
+            <option value="https://www.nate.com">Nate</option>
+        </select>
+    </form>
+
+    <script>
+        const goSite = document.querySelector('select');
+        console.log(goSite)
+        goSite.addEventListener('change', (e)=>{
+            window.open(e.currentTarget.value)
+        })
+    </script>
+
+</body>
+</html>
