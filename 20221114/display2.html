@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display2</title>
+    <style>
+        h1{
+            /* display: none; */
+            /* visibility : hidden */
+            /*display : none설정시 영역이고 뭐고 그냥 없어짐
+            그렇지만 none은 접근성이 꽝이므로 visibility:hidden을 사용해야 함
+            hidden사용시 영역이 유지됨. 그치만...? 얘도 가끔 오류가 난다니까 그냥 opacity 0 하면 됨...*/
+            opacity: 0;
+            background-color:rgba(255, 0, 120, 0.5);
+            transition: 0.5s;
+            /*background opacity : 배경 색상만 조절함
+            opacity : 글자를 포함한 전체의 투명도를 조정함*/
+        }
+
+        h1:hover{
+            opacity:1;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#">LINK</a>
+    <h1>TITLE</h1>
+    <a href="#">LINK2</a>
+
+    
+</body>
+</html>

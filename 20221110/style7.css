@@ -1,0 +1,36 @@
+div{
+    border: 2px solid rgb(145, 219, 102);
+    width: 600px;
+    height: 50px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+div>:only-child {background-color: orange;}
+
+hr+div{
+    height:50px;
+    border:none;
+}
+
+/*탭을 닫아버리는걸 어떻게 설정할까? 
+체크박스를 누르면 >div의 높이가 0이 되도록 설정하면 된다 */
+
+input[type="checkbox"]:checked+div{
+    height: 400px;   
+}
+/*[type="checkbox"]는 생략 가능*/
+
+/*check1을 클릭시 content1만 보이게*/
+
+#check1:checked ~ #content1 {
+    height: 300px;
+}
+
+#check2:checked ~ #content2{
+    height:300px;
+}
+
+#check3:checked ~ #content3{
+    height:300px;
+}

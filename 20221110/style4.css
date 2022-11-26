@@ -1,0 +1,39 @@
+input {
+    border: 2px solid coral;
+}
+
+/*type을 가진 요소에게만 적용*/
+input[type] {
+    background-color: rgb(221, 103, 103);
+}
+
+/*type을 가진 요소 중 text*/
+input[type="text"] {
+    color:rgb(255, 184, 4);
+}
+
+img{
+    width: 300px;
+}
+
+/*첫번째 이미지에만 테두리 적용*/
+img[alt="node"] {
+    border: 5px dotted rgb(255, 187, 0);
+}
+
+/*파일 주소값을 이용해서도 적용 가능*/
+
+img[src ^= "images"] {
+    /* 주소가 images로 시작하는 파일에 적용됨  */
+    border: 1px solid red;
+}
+
+img[src $= "g"] {
+    /*주소가 ~~g로 끝나는 (확장자가 g로 끝나는) 파일에 적용됨*/
+    border: 2px solid blueviolet;
+}
+
+img[src *= "no"] {
+    /*no가 포함되는 파일에 적용됨*/
+    border : 1px solid yellowgreen
+}

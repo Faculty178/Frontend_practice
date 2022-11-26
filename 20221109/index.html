@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                border: 2px solid skyblue;
+            }
+            /*CSS주석은 이렇게*/
+
+            h1{
+                background-color: cadetblue;
+            }
+
+            #p_prime {
+                background-color: cornflowerblue;
+            }
+
+            .l1{
+                background-color: coral;
+            }
+
+            .l2{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            /*클래스는 한 태그에 다중부여 가능 / 여러 태그에 적용하는거 가능*/
+            /*클래스/아이디  이름은 의미를 기준으로 설정할 것*/
+            /*아이디 중복 허용 X / 대소문자 구분 / _, -허용 */
+            /*시작은 무조건 영문자여야 함 */
+        </style>
+    </head>
+    <body>
+        <h1>CSS 선택자</h1>
+        <p id="p_prime">스타일시트를 적용하는 대상을 선택자(Selector)이라고 부른다</p>
+        <h2>선택자 종류</h2>
+        <p class="l1">다양한 선택자에 대해서 알아봅시다</p>
+        <p>이것은 테스트용 더미 텍스트입니다. </p>
+        <ul>
+            <li>전체선택자 * </li>
+            <li>태그선택자 '태그명' </li>
+            <li class="l1 l2">아이디선택자 #</li>
+            <li class="l1">클래스선택자 .</li>
+            <li>선택자에서는 아이디 선택자가 위치 관계없이 우선순위가 높음</li>
+        </ul>
+        
+    </body>
+</html>

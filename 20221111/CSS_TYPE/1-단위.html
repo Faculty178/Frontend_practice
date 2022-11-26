@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*색상 단위*/
+
+        .hh{
+                    height:80px;
+        }
+        h1{
+            /*헥사코드 사용 방식 / RGB를 묶어서 표현한 값*/
+            background-color: #03fcad;
+        }
+
+        h2{
+            /*rgb입력 방식*/
+            background-color: rgb(33, 214, 196);
+        }
+
+        h3{
+            /*rgba입력 방식. a는 알파(Alpha)채널로, 투명도를 표시한다*/
+            background-color: rgba(20, 240, 250, 0.8);
+        }
+
+        h4{
+            /*hsl방식 : Hue, Saturation, Lightness*/
+            /*deg, % % 입력해주는거 잊지 말 것*/
+            background-color: hsl(191deg, 98%, 50%);
+        }
+
+        h5{
+            /*hsl에 투명도를 추가한 팔레트*/
+            background-color: hsla(210deg, 98%, 50%, 0.8);
+        }
+
+
+        /*크기 단위*/
+        /*절대 단위 : pixel(px), point(pt)
+        상대 단위 : em(배수), %, rem, vw, vh*/
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            background-color: rgb(190, 255, 10);
+            color:rgb(0, 0, 0);
+            height: 200px;
+            width: 50vw;
+            /*em은 보통 폰트 크기를 기준으로 함*/
+            /*300px = 225pt , 4:3이라서!*/
+            /*vw/vh는 브라우저 크기 기준*/
+        }
+
+        /* body{
+            background: url(../../HTML5_CSS3/3.CSS속성/images/background.png);
+        } */
+
+
+
+        /**/
+        div:first-of-type{
+            height:80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section></section>
+    <div></div>
+
+    <div>
+        <h1 class="hh">Header1 - HexaCode</h1>
+        <h2 class="hh">Header2 - RGB</h2>
+        <h3 class="hh">Header3 - RGBA</h3>
+        <h4 class="hh">Header4 - HSL</h4>
+        <h5 class="hh">Header5 - HSLA</h5>
+    </div>
+    
+</body>
+</html>

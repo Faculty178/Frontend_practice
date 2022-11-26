@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>스타일시트 적용</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h2{
+                color:rgb(90, 66, 196);
+            }
+        </style>
+        <link rel="stylesheet" href="common1.css">
+    </head>
+    <body>
+        <h1>CSS 적용하기</h1>
+        <hr>
+        <h2 style="color:rgb(43, 138, 106);">인라인 스타일시트 적용</h2>
+        <p>1. 태그에 직접 스타일속성을 적용하는 방법으로, 권장하지 않습니다. </p>
+
+        <h2>임베디드 스타일시트 적용</h2>
+        <p>2. 헤드태그 내에 스타일 태그를 사용하여 적용하는 방법으로, 마찬가지로 권장하지 않습니다. <br>
+        html코드가 누더기가 되어버려요<br>인라인보다 우선순위는 낮습니다.</p>
+
+        <h2>외부 스타일시트 적용</h2>
+        <p>3. CSS파일을 연결하여 적용하는 방법으로, 권장하는 방식입니다. <br>Example : 'link rel="stylesheet" href="style.css"'<br>임베디드 스타일시트와 적용되는 숫자에 따라 우선순위가 달라집니다. <br>따라서 외부 스타일시트를 이용할 경우, 위 두가지 방식은 삭제해야 합니다. </p>
+        <hr>
+
+        <h3>What is Lorem Ipsum?</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,24 @@
+h1 {
+    color:rgb(255, 185, 80);
+    font-size: 40px;
+}
+
+div h1{
+    color: salmon
+}
+
+div div h1{
+    background-color: rgb(255, 221, 136);
+}
+
+#wrap>h1{
+    background-color: rgb(255, 200, 182);
+}
+
+body>h1{
+    border: 1px solid rgb(255, 0, 76);
+}
+
+body>ul>li{
+    border: 2px solid rgb(255, 228, 178);
+}

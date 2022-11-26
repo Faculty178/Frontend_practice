@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-margin2</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div{
+            width: 800px;
+            height: 500px;
+            background-color: rgb(45, 189, 189);
+            margin: 0 auto;
+            /*margin : 0 auto는 width가 화면 전체의 99퍼센트 이하여야 가운데 정렬이 효과가 있음.
+            화면을 꽉 채우면 쓸모가 없다*/
+        }
+
+        h1{
+            /*요소(div)의 첫번쨰 자ㅓ식 요소가 margin으로 top값을 가질 경우 부모가 같이 적용될 수 있다.*/
+            padding-top: 30px;
+            text-align: center;
+            width: 700px;
+            height: 300px;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>중앙배치 하세요</h1>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>반응 문자 선택자</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1::selection{
+                background-color: black;
+                color:white;
+            }
+            p::selection{
+                background-color: pink;
+                /*크롬에서는 일정 명도 대비 이상이어야만 색이 적용됨! (접근성 이슈) 따라서 잘 골라서 색을 택할 것 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem Ipsum dolor sit amet</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,16 @@
+input[disabled]{
+    background-color: aquamarine;
+}
+/*input:disabled와 같음*/
+
+/*Enabled된 것만 표시할 수는 없는지? enabled 상태를 이용한다*/
+
+input:enabled {
+    background-color: coral;
+    color:white;
+}
+
+input:focus{
+    background-color: rgb(255, 208, 0);
+    color:black;
+}

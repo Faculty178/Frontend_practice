@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        h1{
+            width: 600px;
+            height: 200px;
+            background-color: bisque;
+            /* display: inline; */
+            /*inline 적용시 블록 속성이 무시되고 글자 크기만큼 커짐*/
+        }
+
+        a{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(236, 180, 38);
+            /*기본 상태에서는 글자만큼만 보임*/
+            display: block;
+            /*block 적용시 넓이 적용
+            inline-block 적용에는 넓이 + 가로배열
+            자동으로 생기는 여백은 없앨 수가 없어서 inline-block은 자주 사용하지 않음 */
+        }
+
+        table td {
+            border: 2px solid green;
+            width: 200px;
+            height: 200px;
+            /*글자가 기본적으로 가운데 있는 이유 :vertical-align default = center
+            display를 block으로 바꾸면 위로 올라가버림. 서로 적용 가능하나 복잡해지니까 권장하지는 않음 */
+            /* display: block; */
+        }
+
+        /*인라인 요소를 영역관리를 위해 블락으로 바꾸거나, layout-flex를 위해서만 종종 사용함. 하지만 태그의 속성은 많이 알면 알수록 좋다.*/
+
+        
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Title</h1>
+    <p>article</p>
+    <a href="#">LINK</a>
+    <input type="text">
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+    </ul>
+    <table>
+        <tr>
+            <td>Cell</td>
+        </tr>
+    </table>
+</body>
+</html>

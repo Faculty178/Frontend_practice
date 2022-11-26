@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Border</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            div{
+                height: 400px;
+                width: 400px;
+                border-width: 15px;
+                border-color: rgb(103, 123, 179);
+                border-style: outset;
+
+                box-sizing: border-box;
+                padding:100px;
+                /* border-radius: 5%; */
+                /*줄여서 border: 5px double rgb(0, 68, 255)*/
+            }
+
+            div > h1 {
+                border-top : 2px solid black;
+                border-bottom: 2px solid black;
+                float: left;
+                /*or border:1px solid #000 ;
+                    border-left : 0;
+                    border-right: 0;
+                */
+            }
+
+            #int{
+                border:0;
+                background-color: aquamarine;
+                
+                /*input에는 Outline이라는 다른 border이 설정되어 있음 onClick(blah) - 접근성 이슈상 outline0은 하면 안 됨. */
+            }
+
+
+        </style>
+    </head>
+    <body>
+       <div>
+            <h1>Lorem Ipsum <br>dolor amet</h1>
+       </div>
+
+       <h2>INPUT also has border</h2>
+       <input type="text" id="int">
+        
+        
+    </body>
+</html>

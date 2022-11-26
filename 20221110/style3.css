@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+h1, h2, p{
+    color: coral;
+    background-color: antiquewhite;
+}
+
+/*여러 종류의 선택자에 한번에 적용하고 싶다면 comma*/

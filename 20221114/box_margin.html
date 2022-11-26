@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin/Padding</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 10px;
+            /*기본이 시계방향이므로, 네 방향 마진/패딩을 설정하고 싶다면
+            margin; 20px 50px 30px 10px (위-오른쪽-아래-왼쪽)
+            
+            위-아래가 같고, 좌-우의 값이 같은 경우라면
+            margin : 50px 30px (위아래 - 좌우)
+            
+            위=아래는 다르고 좌-우만 같은 경우라면
+            margin: 50px 30px 100px (30px)
+            귀찮으면 이렇게 안 써도 되지만 읽을수는 있어야 함
+
+            body는 기본적으로 8px의 마진을 갖고 있음 
+            위아래의 margin이 중첩될 경우 큰 값 하나만 적용됨
+            */
+        }
+
+        #box1 {
+            width:300px;
+            height: 300px;
+            text-align: center;
+            font-size: 30px;
+            background-color: aquamarine;
+            margin-bottom: 20px;
+        }
+
+        #box2{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            font-size: 30px;
+            background-color: rgb(255, 153, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1">Box1</div>
+    <div id="box2">Box2</div>
+    
+</body>
+</html>
