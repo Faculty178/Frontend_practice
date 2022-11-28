@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>위치속성-상대위치</title>
+    <style>
+      div { width: 100px; height: 100px; color: #fff; font-size: 24px; }
+      div:nth-child(1) { background: red;
+                        position: relative;
+                        top: 100px; left: 100px;
+                        z-index: 1;
+                      }
+      div:nth-child(2) { background: green;
+                        position: relative;
+                        top: 50px; left: 50px;
+                        z-index: 999;
+                      }
+      div:nth-child(3) { background: blue;
+                        position: relative;
+                        /* top: -200px; */
+                        bottom: 200px;
+                        /* left: -50px; */
+                        right: 50px;
+                      }
+    </style>
+  </head>
+  <body>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+  </body>
+</html>

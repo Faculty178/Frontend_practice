@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>테이블에 선 스타일 적용하기</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* table{
+                border: 2px solid rgb(255, 5, 5);
+                /* border-spacing: 0; */
+              /*  border-collapse: collapse;
+                /*collapse와 spacing은 서로 상극인 태그. 적용이 아예 안 먹히니 주의할 것 */
+            /*}*/
+
+            /*td {
+                border: 1px solid black;
+            } */
+
+
+            table{
+                border-collapse: collapse;
+            }
+
+            #line1 {
+                border-top: 5px solid black;
+            }
+
+            #line2{
+                border-bottom: 3px solid black;
+            }
+
+            td{
+                border: 1px solid black;
+                border-right: none;
+            }
+
+            td:first-child{
+                border-left: none;
+            }
+
+            /*모범답안
+                table{
+                    border-collapse:collapse;
+                    border-top: 5px solid #000;
+                    border-bottom: 3px solid #000;
+                }
+
+                td{
+                    border-bottom: 1px solid #000;
+                }
+
+                td:first-child{
+                    border-right: 1px solid #000;
+                }
+            
+            */
+
+            
+
+        </style>
+        
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>HTML</td>
+                <td>CSS3</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>JQuery</td>
+            </tr>
+        </table>
+        <br><br><br>
+        
+        <table>
+            <tr id="line1">
+                <td>1행1열</td>
+                <td>1행2열</td>
+            </tr>
+            <tr id="line2">
+                <td>2행1열</td>
+                <td>2행1열</td>
+
+            </tr>
+        </table>
+
+
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            
+        }
+        td,th{
+            border: 1px solid #000;
+            height: 100px;
+            width: 200px;
+        }
+
+        th{
+            text-align: left;
+            vertical-align: top;
+            /*top, >>middle<< bottom 이니까 조심할 것
+             table셀에서만 적용됨. 따라서 가운데 정렬을 하고 싶다면
+             div display를 table cell로 정할 것 */
+        }
+
+        img{
+            vertical-align: middle;
+            /*px값을 입력하면 baseline을 기준으로 이동
+            baseline위로 하고 싶다면 마이너스값을 이용할 것 */
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <img src="../HTML5_CSS3/3.CSS속성/images/scene1.jpg" alt="굿풍경 굿풍경">
+    <span>123ABCg텍스트</span>
+
+    <table>
+        <tr>
+            <th>헤더 셀</th>
+            <td>테이블셀</td>
+        </tr>
+    </table>
+</body>
+</html>
