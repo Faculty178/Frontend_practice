@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrap{
+            padding: 10px;
+            background-color: rgb(255, 110, 243);
+            display: grid;
+            grid-template-areas: 'header header header header header header' 'nav main main main side side' 'nav footer footer footer footer footer';
+        }
+        
+        .item{
+            padding: 20px;
+            background-color: rgb(212, 69, 117);
+            border: 1px solid rgb(240, 124, 255);
+            font-size: 30px;
+            color:aliceblue;
+            text-align: center;
+        }
+
+        .header{
+           grid-area: header;
+        }
+
+        .menu{
+            grid-area: nav;
+        }
+
+        .main{
+           grid-area: main;
+        }
+
+        .right{
+           grid-area:side;
+        }
+
+        .footer{
+           grid-area: footer;
+        }
+        /*칸 개수 +1만 주의하면 OK */
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="item header">Header</div>
+        <div class="item menu">Menu</div>
+        <div class="item main">Main</div>
+        <div class="item right">Right</div>
+        <div class="item footer">Footer</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List-style</title>
+    <style>
+
+        body, ul, ol{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            background-color: rgb(147, 243, 211);
+            
+            /*ul, ol은 margin을 위아래에 조금씩 갖고 있음.*/
+        }
+
+        ul li{
+            font-size: 30px;
+            background: rgb(138, 255, 216) url(../HTML5_CSS3/3.CSS속성/images/bullet.png) no-repeat 5px center;
+            list-style: none;
+            text-indent: 20px;
+
+            /* list-style-type: square;
+            list-style-position: outside;
+            list-style-image: url(../HTML5_CSS3/3.CSS속성/images/bullet.png);  */
+            /*들여쓰기 여부와 비슷함. 딱히 쓸 일은 없는듯?*//*기본값 disc - circle - square*/
+            /*bullet의 기본 위치는 baseline. */
+
+        }
+
+        ol{
+           
+            background-color: rgb(84, 180, 180);
+        }
+
+        ol li{
+            font-size: 30px;
+            list-style: none;
+            /*기본값 decimal*/
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+    </ul>
+
+    <ol>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+        <li>lorem Ipusm</li>
+    </ol>
+    
+</body>
+</html>

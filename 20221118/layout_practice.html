@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #headerWrap{
+            width: 100%;
+            height: 200px;
+            background-color: cornflowerblue;
+            /* padding-top:100px;
+            box-sizing: border-box; */
+            /*position써도 OK일 듯한?*/
+            /*header에 margin-top, headerwrap에 overflow:hidden도 OK*/
+        }
+
+        #header{
+            width: 1000px;
+            height: 100px;
+            background-color: rgb(127, 219, 255);
+            /* margin: 0 auto; */
+            position: absolute;
+            top:100px;
+            left: calc(50% - 500px);
+            /* margin-left: -500px; */
+            /* transform: translateX(-50%); */
+
+        }
+
+        #content{
+            margin-top: 50px;
+            background-color: rgb(235, 235, 235);
+            /*margin-bottom: 500px;
+            500인 이유 float때문에 이럼*/
+            overflow: auto;
+        }
+
+        #content::after{
+            content: "";
+            display: block;
+            clear: both;
+
+        }
+
+        main{
+            float: left;
+            width: 750px;
+           
+        }
+
+        #content1{
+            width: 400px;
+            height: 400px;
+            background-color: deepskyblue;
+            float: left;
+        }
+
+        #content2{
+            width: 300px;
+            height: 400px;
+            background-color: rgb(85, 170, 255);
+            float: right;
+            
+        }
+
+        #side{
+            width: 200px;
+            height: 300px;
+            background-color: aqua;
+            float: right;
+        }
+
+        #footerWrap{
+            /* clear:both; */
+            border-top: 1px solid #222;
+        }
+
+        #footer{
+            
+            width: 1000px;
+            height: 150px;
+            background-color: rgb(205, 223, 255);
+            margin: 0 auto;
+
+        }
+
+        /*
+        >> float의 영향을 해지하는 방법
+
+        1. float를 적용한 요소의 부모가 없는 경우 : float적용한 요소 아래에 clear속성 적용(clear:both)
+        2.float를 적용한 요소의 부모가 있는 경우 : 
+        부모툐소에 ::after 선택자를 적용하여 다음의 세가지 속성 적용
+            > parent::after{
+                content:"";
+                display:block;
+                clear:both;
+            } 
+        
+        */ 
+
+    </style>
+
+</head>
+<body>
+
+    <div id="headerWrap">
+        <header id="header">Header</header>
+    </div>
+
+    <div id="content">
+        <main>
+            <section id="content1">SECTION1</section>
+            <section id="content2">SECTION2</section>
+        </main>
+        <aside id="side"></aside>
+
+    </div>
+
+    <div id="footerWrap">
+        <footer id="footer">Footer</footer>
+    </div>
+    
+</body>
+</html>

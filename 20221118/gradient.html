@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* body{
+            background: linear-gradient(90deg, rgb(255, 136, 219) 50%, rgba(0,212,255,1) 50%) no repeat;
+            퍼센트 같은 숫자를 쓰는걸 이용해서 body나 요소의 칸을 나누는 것도 가능! 
+        } */
+
+        div:first-of-type{
+            width: 500px;
+            height: 500px;
+            border: 1px solid orange;
+            background: linear-gradient(90deg, rgb(255, 136, 219) 0%, rgba(0,212,255,1) 100%);
+        }
+
+        /* div:last-of-type{
+            background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgb(253, 232, 45) 100%);
+            width: 500px;
+            height: 500px;
+            border: 1px solid orange;
+        } */
+
+        h1{
+            height: 300px;
+            width: 300px;
+            text-indent: -5000px;
+            background: linear-gradient(270deg, rgb(0, 140, 221) 50%, rgb(253, 232, 45) 50%) repeat;
+            background-size: 60px;
+            border-radius: 150px;
+        }
+
+        h1:hover{
+            background-position-x: 50px;
+            transition: 0.5s linear;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+
+    <h1>circle here</h1>
+</body>
+</html>

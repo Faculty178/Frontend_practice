@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrap{
+            padding: 10px;
+            background-color: rgb(81, 119, 221);
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(5, auto);
+        }
+        
+        .item{
+            padding: 20px;
+            background-color: rgb(206, 245, 255);
+            border: 1px solid rgb(95, 130, 204);
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item8{
+           /* grid-column: 2 / 6;
+           grid-row: 1 / 5; */
+           /*위치값 설정해주기
+           grid-column:2;
+           grid-row:1;
+           위치와 크기를 한꺼번에 정해주는 효과가 있음 
+           */
+
+            grid-area: 1 / 2 / 5 / 6 ;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+        <div class="item item11">11</div>
+        <div class="item item12">12</div>
+        <div class="item item13">13</div>
+        <div class="item item14">14</div>
+        <div class="item item15">15</div>
+
+    </div>
+    
+</body>
+</html>
