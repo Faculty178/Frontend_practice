@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 400px;
+            height: 400px;
+            top:100px;
+            left:100px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg);
+
+            animation-name: turn;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-direction:normal;
+            animation-iteration-count: infinite;
+        }
+
+        div{
+            left:100px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            opacity: 0.7;
+        }
+
+        div:nth-child(1){
+            background-color: coral;
+            transform: rotateY(45deg);
+        }
+
+        div:nth-child(2){
+            background-color: rgb(221, 212, 85);
+            transform: rotateY(90deg);
+        }
+
+        div:nth-child(3){
+            background-color: rgb(115, 214, 115);
+            transform: rotateY(135deg);
+        }
+
+        div:last-child{
+            background-color: cornflowerblue;
+        }
+
+        @keyframes turn {
+            0%{
+                transform: rotateX(30deg) rotateY(-360deg);
+            }
+
+            100%{
+                transform: rotateX(30deg) rotateY(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </section>
+</body>
+</html>

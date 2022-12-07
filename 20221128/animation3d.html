@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        body{
+            width: 200px;
+            margin: 100px auto;
+        }
+
+        section{
+            position: relative;
+            width: 200px;
+            height:200px;
+            transform-style: preserve-3d;
+            animation-name: ani;
+            animation-duration: 15s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            backface-visibility: visible;
+        }
+
+        div{
+            opacity: 0.8;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left:0;
+            top:0;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        div:nth-child(1){
+            background-color: burlywood;
+        }
+
+        div:nth-child(2){
+            background-color: cadetblue;
+            transform: translateZ(-200px) rotateY(180deg);
+        }
+
+        div:nth-child(3){
+            background-color: coral;
+            transform: translateX(-100px) translateZ(-100px) rotateY(-90deg);
+        }
+
+        div:nth-child(4){
+            background-color: cornflowerblue;
+            transform: translateX(100px) translateZ(-100px) rotateY(90deg);
+        }
+
+        div:nth-child(5){
+            background-color: rgb(255, 244, 95);
+            transform: translateY(100px) translateZ(-100px) rotateX(90deg);
+        }
+
+        div:nth-child(6){
+            background-color: rgb(199, 139, 218);
+            transform: translateY(-100px) translateZ(-100px) rotateX(90deg);
+        }
+
+        @keyframes ani{
+            from{
+                transform: rotateX(-360deg)rotateY(-360deg);
+            }
+            to{
+                transform: rotateX(360deg)rotateY(360deg);
+            }
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+   
+    
+</body>
+</html>
