@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         svg { width: 500px; height: 500px; border: 1px solid #000; }
+         path{
+            fill:rgb(190, 180, 255);
+            stroke-width: 4;
+            stroke:rgb(23, 69, 156);
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+         }
+        /* 애니메이션이 코드에 따라 각각 달라지니 주의 */
+         svg:hover path{
+            stroke-dashoffset: 0;
+            transition:1.5s;
+         }
+    </style>
+</head>
+<body>
+    <svg>
+        <!-- <path d="M100 100 L400 100, M400 100 L400 400, M400 400 L100 400, M100 400 L100 100"></path> -->
+
+        <!-- <path d="M100 100 400 100 400 400 100 400 Z"></path> -->
+        <!--점 위치를 2개씩 지정 / 처음과 끝점 위치는 동일하게-->
+
+        <path d="M100 100 l300 0 l0 300 l-300 0 z"></path>
+
+    </svg>
+
+    
+</body>
+</html>

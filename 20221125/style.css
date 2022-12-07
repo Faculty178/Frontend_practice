@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+address{
+    font-style: normal;
+}
+
+.hidden{
+    overflow: hidden;
+    width: 1px;
+    height:1px;
+    margin:-1px;
+    position: absolute;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/*HEADER*/
+
+header{
+    width: 100vw;
+    height:100px;
+    background-color: rgb(175, 255, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+header h1{
+    position: absolute;
+    left:100px;
+}
+
+header h1 a{
+    display: block;
+    margin: 20px;
+    text-align: center;
+    font: size 15px;
+}
+
+/*HEADER - Member*/
+#member{
+    position: absolute;
+    right:100px;
+}
+
+#member ul{
+    display: flex;
+    margin-right: 10px;
+}
+
+#member ul li{
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#member ul li a{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*gnb*/
+
+.viewGnb{
+    position: absolute;
+    top:30px; left:50px;
+    width: 50px;
+    height:50px;
+    border : 2px solid #000;
+    text-indent: -999px;
+    overflow: hidden;
+    
+}
+
+#gnb ul{
+    display: flex;
+    margin: 0 10px;
+}
+
+#gnb ul li{
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/*MAIN*/
+
+main{
+    width: 100%;
+    display: flex;
+    background-color: rgb(216, 216, 216);
+    padding: 1px;
+    margin: 50px auto;
+}
+
+main section{
+    height: 400px;
+    width: 100vw;
+    border:1px solid rgb(117, 117, 117);
+    justify-content: space-evenly;
+}
+
+main section:not(:last-child){
+    margin-right: 1%;
+}
+
+section:first-child{
+    background-color: rgb(187, 135, 209);
+}
+
+section:nth-child(2){
+    background-color: rgb(151, 255, 255);
+}
+
+section:nth-child(3){
+    background-color: rgb(195, 255, 136);
+}
+
+section:nth-child(4){
+    background-color: rgb(255, 193, 142);
+}
+
+/*Footer*/
+
+footer{
+    background-color: rgb(131, 205, 255);
+    width: 100vw;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer address{
+    color:white;
+    font-weight: bold;
+}
+
+.viewGnb{
+    display: none;
+}
+
+.viewGnb::before{
+    content:"";
+    position: absolute;
+    top:15px;
+    left:10px;
+    width: 30px;
+    border-bottom: 1px solid black;
+    transition: 1s;
+}
+
+.viewGnb::after{
+    content: "";
+    position: absolute;
+    top:30px;
+    left:10px;
+    width: 30px;
+    border-bottom: 1px solid black;;
+    transition: 1s;
+}
+
+.viewGnb:hover::before{
+    transform:  translateY(7.5px) rotate(45deg);
+}
+
+.viewGnb:hover::after{
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+/*반응형 */
+
+@media screen and (max-width:1200px) {
+    main{
+        width: 100vw;
+        /* flex-wrap: wrap; */
+    }
+
+    main section{
+        height: 32vw;
+    }
+}
+
+
+
+
+@media screen and (max-width:1000px){
+    /*List를 옆으로 빼서 만드는 것 */
+    #gnb{
+        position: fixed;
+        top:0;
+        left:-200px;
+        height:100vh;
+        width:200px;
+        background-color: rgb(27, 182, 187);
+        overflow: hidden;
+    }
+
+    #gnb ul{
+        display: block;
+        transition: 0.5s;
+    }
+
+    #gnb ul li{
+        text-align: center;
+        line-height: 50px;
+        margin:20px;
+    }
+
+    #gnb ul li a{
+        color:white;
+        font-size: 23px;
+    }
+
+    #member{
+        right:30px;
+    }
+
+
+    header h1{
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    main{
+        flex-wrap: wrap;
+        padding:5px;
+    }
+
+    main section{
+        width: 48vw;
+        height: 40vw;
+    }
+
+    main section:not(:last-child){
+        margin-right: 0;
+    }
+
+    main section:nth-child(2n+1){
+        margin-right: 1%;
+    }
+
+    .viewGnb{
+        display: block;
+    }
+    
+    .viewGnb:hover + #gnb{
+        left:0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    main section{
+        width: 100vw;
+        height:50vh;
+        margin: 0;
+    }
+
+    main section:nth-child(odd){
+        margin: 0;
+    }
+
+    main section:not(:last-child){
+        margin-bottom: 1%;
+    }
+
+    
+}

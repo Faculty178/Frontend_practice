@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;    
+    box-sizing: border-box;        
+}
+
+header{
+    background-color: rgb(167, 255, 226);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    margin-right:15px;
+    
+}
+
+header ul li{
+    justify-content: center;
+    list-style: none;
+    
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color:black;
+    margin:20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*header*/
+header h1{
+   position: absolute;
+   left:15px;
+}
+
+nav{
+    position: absolute;
+    top:10px;
+    right: 10px;
+}
+
+main{
+    /* height: 500px; */
+    width: 100%;
+    display: flex;
+    background-color: rgb(64, 123, 231);
+    padding: 50px;
+}
+
+main section{
+    height: 400px;
+    /*각 요소 50px간격*/
+    width: 100vw;
+    background-color: rgb(147, 255, 255);
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+
+section:not(:last-child){
+    margin-right:50px;
+}
+
+footer{
+    background-color: aqua;
+    width: 100vw;
+    height: 150px;
+}
+
+/*responsive*/
+@media screen and (max-width:800px){
+    main{
+        flex-flow: wrap;
+    }
+
+    main section:not(:last-child){
+        margin-right: 0;
+        margin-bottom:50px;
+    }
+    /*부모가 있는 쪽이 우선순위이므로 위아래 종류를 맞춰서 작성할 것 */
+}

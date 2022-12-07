@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         svg { width: 500px; height: 500px; border: 1px solid #000;
+        transform: rotate(-90deg); }
+        
+        circle{
+            fill:lemonchiffon;
+            stroke: chocolate;
+            stroke-width: 3;
+            stroke-dasharray: 1257;
+            stroke-dashoffset: 5483.5;
+        }
+
+        svg:hover circle{
+            stroke-dashoffset: 0;
+            transition: 15s;
+        }
+
+    </style>
+</head>
+<body>
+    <svg>
+        <circle cx="250" cy="250" r="200"/>
+    </svg>
+</body>
+</html>

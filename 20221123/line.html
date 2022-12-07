@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>svg</title>
+    <style>
+      svg { width: 500px; height: 500px; border: 1px solid #000; }
+      line { stroke-width: 2; stroke: #000;
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            transition: 1s;
+      }
+      svg:hover line { stroke-dashoffset: 0; }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <line x1="50" y1="250" x2="450" y2="250">
+    </svg>
+  </body>
+</html>

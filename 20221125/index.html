@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Header -->
+        <header id="header">
+            <h1><a href="#">Logo</a></h1>
+            
+            <nav id="member">
+                <h2 class="hidden">멤버쉽 관련</h2>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원관련</a></li>
+                </ul>
+            </nav>
+
+            <a href="#" class="viewGnb"><span class="hidden">menu</span></a>
+
+            <nav id="gnb">
+                <h2 class="hidden">주요메뉴</h2>
+                <ul>
+                    <li><a href="#">List1</a></li>
+                    <li><a href="#">List2</a></li>
+                    <li><a href="#">List3</a></li>
+                    <li><a href="#">List4</a></li>
+                </ul>
+            </nav>
+
+            
+        </header>
+       
+        <!--main-->
+        <main>
+            <section><h2>Content1</h2></section>
+            <section><h2>Content2</h2></section>
+            <section><h2>Content3</h2></section>
+            <section><h2>Content4</h2></section>
+
+        </main>
+
+        <footer>
+            <address>Footer Address</address>
+        </footer>
+        
+        <script>
+            const viewGnb = document.querySelector('.viewGnb');
+            const Gnb = document.getElementById('gnb');
+
+            viewGnb.addEventListener("click", ()=>{
+                Gnb.style.left = "0px";
+            });
+
+            Gnb.addEventListener("mouseleave", ()=>{
+                Gnb.style.left = "-200px";
+            });
+
+
+        </script>
+    </body>
+</html>
