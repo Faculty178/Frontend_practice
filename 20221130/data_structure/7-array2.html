@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let word = ['a', 'b', 'c', 'd', 'e'];
+        console.log(word);
+
+        word.push('f'); //맨 뒤에 f추가 
+        word.unshift('A') //맨 앞에 A추가
+        //배열 자체에 바로 적용됨 
+
+        word = word.concat(['g', 'h', 'i'])
+        word = word.splice(1, 1);
+        console.log(word);
+
+        //or
+        word = word.splice(1, 0, 'B');
+
+        let num = [5, 3, 1, 7, 9];
+
+        num.reverse(); //[9, 7, 1, 3, 5]
+        num.sort(); // [1, 3, 5, 7, 9]
+        num.sort().reverse(); // [9, 7, 5, 3, 1]
+
+        let str = ['aa', 'bb', 'cc'];
+        console.log(str, typeof(str));
+
+        let str2 = str.join();
+        console.log(str2, typeof(str2));
+
+        let str3 = 'Hello, Javascript!';
+        str3 = str3.split(', ');
+        console.log(str3, typeof(str3));
+
+
+    </script>
+</body>
+</html>

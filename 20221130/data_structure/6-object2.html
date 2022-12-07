@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tv = Object();
+        tv.color = 'greentea';
+        tv.price = 1000000;
+        tv.info = function(){
+            document.write(`tv색상은 ${tv.color}<br> tv의 가격은 ${tv.price}!<br><br>`);
+        }
+        //함수도 value로 입력 가능 
+        tv.info();
+
+        let car ={
+            color: 'black',
+            price: 3000000,
+            info: function(){
+                document.write(`car색상은 ${car.color} <br> car의 가격은 ${car.price}`);
+            }
+        }
+
+        car.info();
+
+    </script>
+</body>
+</html>

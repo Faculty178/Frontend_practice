@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>변수란</title>
+    <script>
+      // 변수란 임의의 값을 저장하고 읽을 수 있는 가상의 공간
+      var a;
+      console.log(a);
+      a = "홍길동";
+      console.log(a);
+      a = "임꺽정";
+      console.log(a);
+      a = 10;
+      console.log(a + a);
+      a = "10";
+      console.log(a + a);
+
+      var b, c;
+      var aa = 10;
+      var bb = 20, cc = 20;
+      /*
+       1. 변수의 첫글자는 반드시 영문으로 시작()
+           단, (_), ($) 특수기호는 가능
+           ex) _name, $name (o)
+       2. 숫자사용가능, 시작을 숫자로는 사용 X
+           ex) 3name (X)
+       3. 대소문자 구분
+           var a, A;
+       4. 특수기호는 _, $ 제외 사용불가능
+       */
+        // var 7num=100;
+        // var &num=100;
+        // var true=1;
+        // var 10=x;
+        // var a+b=20;
+        // var “홍길동”=name;
+        // var get Number=100;
+        var a, b, c = 100;
+        var a = b = c = 10;
+        console.log(a, b, c);
+
+        var area = prompt('현재 거주지역을 입력하시오');
+        document.write("현재 사는 지역은 " + area + "입니다" + "<br>");
+        document.write(`현재 사는 지역은 ${area}입니다<br>`);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

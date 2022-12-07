@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>크기변경1</button>
+    <button>크기변경2</button>
+
+    <h1>제목박스의 크기를 변경하시오</h1>
+
+    <script>
+        const heading = document.querySelector('h1');
+        const btn = document.querySelectorAll('button');
+        const bgColor = ['salmon', 'skyblue'];
+
+        function change(hw, hh, i){
+            heading.style.width = `${hw}px`;
+            heading.style.height = `${hh}px`;
+            heading.style.backgroundColor = bgColor[i];
+        }
+
+        btn[0].addEventListener('click', ()=>{
+            change(500, 200, 0);
+        })
+
+        btn[1].addEventListener('click', ()=>{
+            change(200, 500, 1);
+        })
+
+    </script>
+</body>
+</html>

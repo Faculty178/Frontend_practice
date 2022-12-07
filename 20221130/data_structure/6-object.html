@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Object(객체)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        
+        <script>
+            // let people = {};
+            // people.name = "John constantine";
+            // people.age = "53";
+            // people.job = "conman";
+
+            let people = {
+                name:'John Constantine',
+                age:20,
+                job:'conman'
+            };
+            people.area = 'London';
+            people.name = 'Zatanna Zatara' //덮어쓰기
+            people.age = '36'
+            //same@
+
+            console.log(people, typeof(people));
+            console.log(people.length);
+            console.log(Object.keys(people));
+            console.log(Object.keys(people).length);
+            console.log(Object.values(people));
+
+
+
+        </script>
+    </body>
+</html>

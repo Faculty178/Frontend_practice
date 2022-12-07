@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            let str1 = "Hullo";
+            let str2 = "luv? How you've been?";
+            console.log(`${str1}, ${str2}`);
+            let str3 = str1.concat(str2);
+            console.log(str3);
+            let str4 = str1 + ", " + str2;
+            console.log(str4);
+
+            let alpha = "ABCDEabcde";
+            len = alpha.length;
+            upper = alpha.toUpperCase;
+            lower = alpha.toLocaleLowerCase;
+            
+            alpha_A = alpha.charAt(0); //A
+            alpha_e = alpha.charAt(9); //e
+
+            console.log(alpha.charAt(10)); //빈 문자열 출력(indexError는 안 남)
+
+            str5 = "abcdefghijkabcdefghijkabcdefghijk"
+            console.log(str5[str5.length-5]);
+
+        </script>
+    </body>
+</html>

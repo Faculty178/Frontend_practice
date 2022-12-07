@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>변수타입, 데이터타입, 자료형</title>
+    <script>
+
+      // 리터럴 표기방식
+      // 변수를 선언함과 동시에 그 값과 자료형을 지정해주는 표기법
+      var num = 10;
+      var str = '홍길동';
+      var state = true; //
+      console.log(num, typeof(num))
+      console.log(str, typeof(str))
+      console.log(state, typeof(state))
+      // boolean 타입은 true/false 두개의 값만 가짐
+
+      var arr = ['사과', '배', '참외'];
+      var obj = { name: "홍길동", age: "20" }
+      console.log(arr, typeof(arr))
+      console.log(obj, typeof(obj))
+
+      var twice;
+      console.log(twice, typeof(twice))
+
+      var twice2;
+      twice2 = null;
+      // null 유효하지 않은 값
+      console.log(twice2, typeof(twice2))
+
+      // 느슨한 자료형 체크(weak datatype check)
+      // 자바스크립트는 미리 변수의 자료형을 지정하지 않음
+      // 변수를 지정하고 원하는 값을 할당만 하면 됨
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
