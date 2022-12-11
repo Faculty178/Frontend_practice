@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>배경색상과 폰트색상을 다음의 3가지 경우로 맞추어 변경하시오</p>
+    <ul>
+        <li>pink-black</li>
+        <li>blue-white</li>
+        <li>black-yellow</li>
+    </ul>
+
+
+    <script>
+        let color1 = ['pink', 'blue', 'black'];
+        let color2 = ['black', 'white', 'yellow'];
+
+        index_number = Math.floor(Math.random()*3);
+        const body = document.querySelector('body');
+
+        body.style.backgroundColor = `${color1[index_number]}`;
+        body.style.color = `${color2[index_number]}`;
+
+       
+    </script>
+</body>
+</html>

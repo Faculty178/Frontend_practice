@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>if 조건문</title>
+    <script>
+      // 조건문은 특정 조건에 대해서 반응하고 그것을 처리
+      // if문 / switch문
+      // if문은 특정 조건이 성립할 경우 해당결과를 실행
+      if (true) {
+        console.log('참이므로 구문 실행');
+      }
+      if (false) {
+        console.log('거짓이므로 구문 실행하지 않음');
+      }
+      // false로 인식하는 값은
+      // 숫자 0, 빈문자열 "", null, undefined, NaN
+      let walkNum = prompt('오늘 걸음 수를 입력하시오', '0');
+      if (walkNum >= 10000) {
+        document.write('<h1>참 좋은 습관입니다')
+      }
+      if (walkNum < 10000) {
+        document.write("<h1>건강을 위해 좀더 걸으세요")
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

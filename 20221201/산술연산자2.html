@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width:100px;
+            height: 100px;
+            background-color: deepskyblue;
+            position: absolute;
+            left:10px;
+            top:50px;
+            transition:0.5s linear;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <div id="box"></div>
+
+    <script>
+        const box = document.getElementById('box');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener("click", move);
+        let num = 0;
+        let paht = 1;
+
+        function move(){
+
+            if(num > 500){
+                num = 10;
+            }
+            else{
+                num += 100;
+            }
+            box.style.left = `${num}px`;
+        }
+
+        // btn.addEventListener("click", boxMove);
+        // let boxMove = () =>{
+            //Details~ margin-left도 괜찮음 
+        // }
+
+    </script>
+</body>
+</html>
