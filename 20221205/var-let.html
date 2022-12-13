@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(136, 136, 136);
+        }
+
+    </style>
+</head>
+<body>
+
+    <button>색상변경</button>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        let food =  ['짜장면', '짬뽕', '볶음밥', '탕수육', '유린기', '멘보샤'];
+
+        for( let i = 0; i< food.length; i++){
+            document.write(`${i+1}등은 ${food[i]}입니다.<br>`);
+        }
+
+        const btn = document.querySelector('button');
+        const div = document.querySelectorAll('div');
+        
+        function changeColor(){
+            for(i = 0; i<div.length; i++){
+                div[i].style.backgroundColor = 'deepskyblue';
+            }
+        }
+        
+        btn.addEventListener("click", changeColor);
+
+
+    </script>
+</body>
+</html>

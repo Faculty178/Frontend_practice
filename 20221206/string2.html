@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // let name = prompt('이름을 영어로 입력하세요.');
+        // name = name.toUpperCase();
+        // document.write(name, '<br>');
+
+        // let number = prompt('전화번호를 입력하세요');
+        // len = number.length;
+        // number_front = number.substring(0, len-4);
+        // number = number_front + "****";
+        // document.write(number, '<br>');
+
+        //number2 = userNum.replaceAll('-', '');
+        //or number2 = userNum.replace(/-/g, '');
+
+
+        const text = '안녕하세요 제 전화번호는 010-2222-1111입니다';
+        const telNum = text.match(/\d{3}-\d{4}-\d{4}/);
+        //object되는게 주의사항!
+        document.write(telNum.join(), typeof(telNum));
+        console.log(telNum);
+
+    </script>
+
+</body>
+</html>

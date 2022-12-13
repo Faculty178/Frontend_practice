@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        let string = "Hello, World! Good Mornin'! Good day to y all";
+
+        document.write(string.length, '<br>');
+        document.write(string.charAt(17), '<br>');
+
+        document.write(string.indexOf('Good'), '<br>');
+        document.write(string.lastIndexOf('Good'), '<br>');
+        //일반 indexOf는 앞에서부터, lastIndexOf는 뒤에서부터 검색
+
+        document.write(string.includes('you'), '<br>');
+        document.write(string.includes('Hello'), '<br>');
+        //있으면 true, 없으면 false 리턴
+
+        document.write(string.search('Mornin'), '<br>');
+        //있으면 인덱스 번호, 없으면 -1 리턴
+        //정규표현식 사용 가능 
+
+        document.write(string.match('day'), '<br>');
+        document.write(string.match('too'), '<br>');
+        //있으면 워드 출력, 없으면 null리턴 
+
+        let thank = string.substr(7, 5);
+        document.write(`${thank} <br>`);
+        //7번 인덱스부터 5개의 문자를 가져옴 
+
+        thank = string.substring(7, 13);
+        document.write(`${thank} <br>`);
+        //7번 인덱스부터 13번 인덱스까지 가져옴
+
+        document.write(string.replace('Mornin', 'Morning'), '<br>');
+        document.write(string.replace('/you/g', 'me'), '<br>');
+        //문자열 안의 모든 you를 의미함
+
+        document.write(string.toUpperCase(), '<br>');
+        document.write(string.toLowerCase(), '<br>');
+    </script>
+    
+</body>
+</html>

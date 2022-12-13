@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        document.write(Number.MAX_VALUE, "<br>");
+        document.write(Number.MIN_VALUE, "<br>");
+        document.write(Number.POSITIVE_INFINITY, "<br>");
+        document.write(Number.NEGATIVE_INFINITY, "<br>");
+
+        let num1 = 700000;
+        let num2 = 3.456789;
+        
+        document.write(num1.toExponential(2), "<br>");
+        document.write(num2.toExponential(), "<br>");
+        //지수표기법, 안의 숫자를 소숫점 자리수 
+        //문자형 데이터로 바뀌는거 주의 
+
+        document.write(num1.toFixed(2), "<br>");
+        //소숫점 n번쨰 자리까지 반올림 
+
+        document.write(num2.toPrecision(2), "<br>");
+        //유효숫자만큼 표현 
+
+
+        let num3 = "30.5px";
+        let num3_new = parseFloat(num3);
+        document.write(num3_new, "<br>");        
+        
+        let num4 = 40;
+        document.write(num4.valueOf(), "<br>");
+
+
+    </script>
+</body>
+</html> 

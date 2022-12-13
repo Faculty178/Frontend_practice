@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div></div>
+
+    <button>red</button>
+    <button>green</button>
+    <button>blue</button>
+
+
+
+    <script>
+      const btn = document.querySelectorAll('button');
+      const div = document.querySelector('div');
+
+    //   for(let i=0; i<btn.length; i++) {
+    //     btn[i].addEventListener('click', ()=> {
+    //       div.style.background = btn[i].innerText;
+    //     })
+    //   }
+       
+    // for (let i of btn){
+    //     i.addEventListener('click', ()=> {
+    //         div.style.background = i.innerText;
+    //     })
+    // }
+
+    // for in을 배열에는 쓰지 마시오 
+
+    btn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            div.style.backgroundColor = item.innerText;
+        })
+    })
+        
+
+    let obj = {
+        name:'이순신',
+        age: '40'
+    };
+
+    for (let i in obj){
+        console.log(obj[i]);
+    }
+
+
+    </script>
+</body>
+</html>

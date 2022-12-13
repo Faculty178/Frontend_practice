@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>for문을 활용한 합계</title>
+    <script>
+      let sum = 0;
+      let n = prompt('반복횟수를 입력하시오')
+      let calc = ()=> {
+        // sum = Number(prompt())+Number(prompt())+Number(prompt())
+        for (i=0; i<n; i++ ) {
+          sum += Number(prompt('숫자로만 입력'))
+        }
+        document.write(sum)
+      }
+      calc();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

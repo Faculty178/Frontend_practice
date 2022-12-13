@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-case</title>
+</head>
+<body>
+    <h1>좋아하는 과일 이름은?</h1>
+
+    <script>
+
+        let txt = document.querySelector('h1');
+        let fruit = prompt('좋아하는 과일을 입력하시오');
+
+        switch(fruit){
+            case '딸기':
+                txt.innerText = `${fruit}를 좋아합니다`;
+                break;
+            case '사과':
+                txt.innerText = `${fruit}를 좋아합니다`;
+                break;
+            case '포도':
+                txt.innerText = `${fruit}를 좋아합니다`;
+                break;
+            case '수박':
+                txt.innerText = `${fruit}를 좋아합니다`;
+                break;
+            default :
+                txt.innerText = `특이한 과일을 좋아하시는군요...`;
+
+        }
+
+
+    </script>
+</body>
+</html>

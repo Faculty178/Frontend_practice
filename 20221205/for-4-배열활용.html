@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배열을 활용한 for문</title>
+    <script>
+      let food = ['짜장면', '짬뽕', '탕수육', '볶음밥', '칠리새우'];
+      // document.write(`1등 ${food[0]}<br>`)
+      // document.write(`2등 ${food[1]}<br>`)
+      // document.write(`3등 ${food[2]}<br>`)
+      // document.write(`4등 ${food[3]}<br>`)
+      for (let i=0; i<food.length; i++) {
+        console.log(`${i+1}등 ${food[i]}`)
+      }
+    </script>
+    <style>
+      div { width: 100px; height: 100px;
+            border: 1px solid #000;  }
+    </style>
+  </head>
+  <body>
+    <button>색상변경</button><br><br>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      const btn = document.querySelector('button');
+      const div = document.querySelectorAll('div');
+      console.log(btn);
+      console.log(div);
+
+      btn.addEventListener('click', ()=> {
+        // div[0].style.backgroundColor = "#4caeed";
+        // div[1].style.backgroundColor = "#4caeed";
+        // div[2].style.backgroundColor = "#4caeed";
+        for (let i=0; i<div.length; i++) {
+          div[i].style.backgroundColor = "#d5aef5";
+        }
+      })
+      for (let i=0; i<div.length; i++) {
+        div[i].addEventListener('click', ()=> {
+          console.log(i);
+          // for (let i=0; i<div.length; i++) {
+            div[i].style.backgroundColor = "#911bf2";
+            // event.currentTarget.style.backgroundColor = "#911bf2";
+          // }
+        })
+      }
+
+    </script>
+  </body>
+</html>
