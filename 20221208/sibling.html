@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+
+    <script>
+        const wrap = document.getElementById('wrap');
+        const p1 = wrap.children[0];
+        console.log(p1);
+
+        p1.nextSibling.nextSibling.style.backgroundColor = "lightgreen";
+        //이걸 두번 쓰는것도 바보짓이다... nextElementSibling을 쓰시오 
+        p1.nextElementSibling.style.color = "blue;"
+
+        const lastP = wrap.lastElementChild;
+        lastP.previousElementSibling.style.backgroundColor = "salmon";
+
+        for (let name in Node){
+            console.log(name, name.length, Node[name]);
+        }
+
+    </script>
+
+</body>
+</html>

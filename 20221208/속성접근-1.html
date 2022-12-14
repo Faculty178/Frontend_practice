@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>속성제어</title>
+    <style>
+      /* div#target.active a { color: skyblue; } */
+      /* #target.active a { color: pink; } */
+      /* div#target a { color: green; } */
+      /* #target a { color: orange; } */
+      /* div.active a { color: blue; } */
+      /* .active a { color: yellow; } */
+      /* div a { color: red; } */
+
+      #target { background: #265e44; }
+      .active a { color: #fff; }
+
+      #target2 { background: #e95454; }
+      .active2 a { color: #ff0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="target" class="active">
+      <a href="#">네이버</a>
+    </div>
+    <script>
+      const divTag = document.getElementById('target');
+      // const divTag = document.querySelector('.active');
+      console.log(divTag);
+
+      // let idName = divTag.getAttribute('id');
+      let idName = divTag.id;
+      console.log(idName);
+
+      // let className = divTag.getAttribute('class');
+      let className = divTag.className;
+      console.log(className);
+
+      console.log(divTag.children[0].getAttribute('href'))
+      console.log(divTag.children[0].href);
+
+      if ( idName == "target" ) {
+        divTag.style.border = "5px solid #ff0";
+      }
+
+      // 속성값 변경
+      // divTag.setAttribute('id', 'target2');
+      divTag.id = 'target2';
+
+      // divTag.setAttribute('class', 'active2');
+      divTag.className = 'active2';
+
+      // a의 이동경로를 네이버로 변경하시오
+      const anchor = divTag.children[0];
+      // anchor.setAttribute('href', 'https://www.naver.com/');
+      // anchor.setAttribute('target', '_blank');
+      anchor.href = 'https://www.naver.com/';
+      anchor.target = '_blank';
+
+    </script>
+  </body>
+</html>

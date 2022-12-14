@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+    <p></p>
+
+    <script>
+        let num = 2.1234;
+
+        const text = document.querySelector('p');
+
+        let user = prompt('가위바위보 중에서 골라보세요','가위');
+        let com = 0;
+
+        switch (user){
+            case '가위':
+                com = 1;
+                break;
+            case '바위':
+                com = 2;
+                break;
+
+            case '보':
+                com = 3;
+                break;
+            default:
+                document.write('가위바위보 외에는 결과가 안 나옵니다');
+        }   
+
+        
+        document.write('<h1>가위바위보 맞추기</h1>');
+        const randNum = Math.round(Math.random()*2)+1;
+        document.write(`<img src="../images/play/math_img_${randNum}.jpg">`);
+
+        if(com === randNum){
+            text.innerText = '맞췄습니다! 축하합니다!';
+        }
+        else{
+            text.innerText = '틀렸습니다!';
+        }
+
+       
+
+        /*가위 / 바위 / 보*/
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, ul{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            overflow: hidden;
+        }
+
+        ul{
+            display: flex;
+            width: 400%;
+            transition: 1s;
+        }
+
+        li{
+            list-style: none;
+            width: 100%;
+            height: 500px;
+            font-size:50px;
+        }
+
+        .slider1{
+            background-color: salmon;
+        }
+        .slider2{
+            background-color: blanchedalmond;
+        }
+        .slider3{
+            background-color: burlywood;
+        }
+        .slider4{
+            background-color: darkgoldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <ul>
+            <li class="slider1">1</li>
+            <li class="slider2">2</li>
+            <li class="slider3">3</li>
+            <li class="slider4">4</li>
+        </ul>
+    </section>
+   
+    
+    <script>
+        const ul = document.querySelector('ul');
+        let number = 0;
+
+        function slider(){
+            ul.style.marginLeft = `-${number}%`;
+            number += 100;
+            if(number > 400){
+                number = 0;
+            }
+        }
+
+        setInterval(slider, 2000);
+
+    </script>
+
+</body>
+</html>

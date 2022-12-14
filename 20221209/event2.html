@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>적용</button>
+    <h1>텍스트 바꾸기</h1>
+
+    <script>
+        const btn = document.querySelector('button');
+        const heading = document.querySelector('h1');
+
+        function test1(){
+            alert('test1');
+        }
+
+        function test2(){
+            alert('test2');
+
+        }
+
+        // btn.onclick = test1;
+        // btn.addEventListener("click", test1);
+        // btn.addEventListener("click", test2);
+        //순서대로 둘 다 수행 
+
+        let n = 32;
+        let test3 = () => {
+            n += 5;
+            heading.style.fontSize = `${n}px`;
+        }
+
+        btn.addEventListener('mouseenter', test3);
+        btn.addEventListener('click', test3);
+
+
+
+
+
+    </script>
+</body>
+</html>

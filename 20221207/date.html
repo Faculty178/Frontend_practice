@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+    
+    <script>
+        const today = new Date();
+        //
+
+        let bDay = new Date(1998, 03, 23);
+        let dif = today - bDay;
+        dif_day = Math.floor(dif /(24*60*60*1000));
+        console.log(dif_day);
+        document.write(`태어난지 ${dif_day}일째<br>`);
+
+        //
+
+        let thisYear = new Date(2022, 11, 31);
+        let calc = thisYear - today;
+        calc_Day = Math.ceil(calc / (24*60*60*1000));
+        document.write(`올해가 끝나기까지 ${calc_Day}일 남았음 <br>`);
+
+
+    </script>
+</body>
+</html>

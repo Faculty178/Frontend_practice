@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>형제요소에 접근</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <p>내용1</p>
+      <p>내용2</p>
+      <p>내용3</p>
+      <p>내용4</p>
+    </div>
+    <script>
+      const wrap = document.getElementById('wrap');
+      console.log(wrap)
+      // const p1 = wrap.children[0];
+      const p1 = wrap.firstElementChild;
+      console.log(p1);
+      console.log(p1.nextSibling)
+      console.log(p1.nextElementSibling)
+      p1.nextElementSibling.style.color = "#f00";
+
+      const lastP = wrap.lastElementChild;
+      lastP.previousElementSibling.style.color = "#00f";
+
+      for (let name in Node) {
+        console.log(name, Node[name])
+      }
+
+      if ( p1.firstChild.nodeType == 3) console.log('true');
+      else console.log('false')
+
+    </script>
+  </body>
+</html>

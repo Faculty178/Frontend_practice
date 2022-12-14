@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 적용방법</title>
+  </head>
+  <body>
+    <button onclick="bgColor1()">적용1</button>
+    <button>적용2</button>
+    <button>적용3</button>
+    <script>
+      const btn = document.querySelectorAll('button');
+
+      function bgColor1() {
+        document.body.style.background='beige';
+      }
+      function bgColor2() {
+        document.body.style.background='skyblue';
+      }
+      function bgColor3() {
+        document.body.style.background='gray';
+      }
+
+      // btn[1].onclick = function() {
+      //   bgColor2();
+      // }
+      btn[1].onclick = bgColor2;
+
+      btn[2].addEventListener('click', ()=>{
+        bgColor3();
+      })
+
+
+    </script>
+  </body>
+</html>

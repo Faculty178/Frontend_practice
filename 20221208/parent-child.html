@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>선호하는 음식</h1>
+
+    <div id="food1">
+        <h2>한식</h2>
+        <ol>
+            <li>비빔밥</li>
+            <li>순두부찌개</li>
+            <li>육개장</li>
+        </ol>
+    </div>
+
+    <div id="food2">
+        <h2>양식</h2>
+        <ol>
+            <li>피자</li>
+            <li>파스타</li>
+            <li>스테이크</li>
+        </ol>
+    </div>
+
+    <script>
+
+        const food1 = document.getElementById('food1');
+        const food2 = document.getElementById('food2');
+
+        const kfood = food1.children[0];
+        kfood.style.backgroundColor = "salmon";
+        //food1.childNodes[1] 해도 같은 결과가 나옴! 
+        //node는 주석과 텍스트도 요소로 간주하기 때문에... 그냥 children을 쓰길 바람... 
+
+        const food2_heading = document.querySelector('#food2 h2');
+        const title = food2_heading.parentElement;
+        console.log(title);
+        title.style.backgroundColor = 'Deepskyblue';
+        //부모는 parentelement하나 parentnode하나 구조상 큰 차이가 없음 
+
+    </script>
+
+</body>
+</html>
