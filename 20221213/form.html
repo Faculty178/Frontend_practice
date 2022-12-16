@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="people">
+        <legend>개인정보</legend>
+        <input type="text" id="idName" name="userName">
+    </form>
+
+    <form name="company">
+        <legend>회사정보</legend>
+        <input type="text" name="comName"><br>
+        <input type="text" name="part"><br>
+        <input type="text" name="part"><br>
+        <input type="text" name="part">
+    </form>
+    
+
+    <script>
+
+        const people = document.people.userName;
+        console.log(people);
+        //이런 요상한 방식이 적용가능 
+
+        const partName = document.company.part;
+        console.log(partName); //배열 형식인게 포인트 
+
+        partName.forEach(element => {
+            element.style.backgroundColor = "orange";
+        });
+
+        
+
+    </script>
+</body>
+</html>

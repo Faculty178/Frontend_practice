@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+
+        let op = 0.5;
+        document.body.style.background = "lightgreen";
+        const div = document.querySelector('div');
+        div.style.backgroundColor = 'black';
+
+
+        window.addEventListener('wheel', (e)=>{
+            if(e.wheelDelta < 0){
+                console.log('down');
+                op = op - 0.05;
+                if(op < 0){
+                    op = 0;
+                }
+                div.style.opacity = `${op}`;
+                console.log(op);
+            }
+            else{
+                console.log('up');
+                op = op + 0.05;
+                if(op > 1){
+                    op = 1;
+                }
+                div.style.opacity = `${op}`;
+                console.log(op);
+                
+            }
+        })
+    </script>
+</body>
+</html>

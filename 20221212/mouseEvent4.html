@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 50px 0 0 50px;
+        }
+
+        p{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>
+        마우스 위치 알아내기
+    </h1>
+    <div></div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        const div = document.querySelector('div');
+        const p = document.querySelectorAll('p');
+
+        div.addEventListener('mousemove', (e)=>{
+            //screenX, screenY, pageX, pageY, clientX, clientY,
+            //offsetX, offsetY, x, y
+            //와방많음! 근데 일부는 겹치니까 쓰는것만 쓸것임
+
+            p[0].innerHTML = `screenX : ${e.screenX}, screenY : ${e.screenY}`;
+            p[1].innerHTML = `pageX : ${e.pageX}, pageY : ${e.pageY}`;
+            p[2].innerHTML = `clientX : ${e.clientX}, clientY : ${e.clientY}`;
+            p[3].innerHTML = `offsetX : ${e.offsetX}, offsetY : ${e.offsetY}`;
+            p[4].innerHTML = `X : ${e.x}, Y : ${e.y}`;
+            //offset X,Y div기준
+            //pageXY, clientXY는 스크롤이 생기면 달라짐 (clientXY는 브라우저 화면 기준, pageXY는 웹페이지 화면)
+            //pageXY = XY
+            //screenXY보다시피...
+            
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="test">
+        <input type="text" name="myName" placeholder="이름을 입력하시오">
+        <input type="button" name="btn" value="Submit">
+    </form>
+
+    <h1>이름 출력</h1>
+
+    <script>
+        const test = document.test;
+        const h1 = document.querySelector('h1');
+
+        const btn = test.btn;
+        console.log(btn);
+
+        test.myName.addEventListener('focus', ()=> {
+            heading.innerHTML = '포커스 상태입니다';
+        })
+        test.myName.addEventListener('blur', ()=> {
+            heading.innerHTML = '블러 상태입니다';
+        })
+
+        // test.btn.addEventListener('click', ()=> {
+        //     heading.innerHTML = test.myName.value;
+        // })
+
+    </script>
+    
+</body>
+</html>

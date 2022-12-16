@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Cnt</h1>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        let cnt = 0;
+
+        let checkColor = ()=>{
+            h1.innerText = window.innerWidth;
+
+            if(window.innerWidth > 1000){
+                document.body.style.backgroundColor = "salmon";
+            }else{
+                document.body.style.backgroundColor = "orange";
+            }
+            //미디어쿼리를 소중히 여겨주세요 굳이?싶은 예시긴 함 
+        }
+        
+        checkColor();
+        window.addEventListener('resize', ()=>{
+            // cnt += 1;
+            // h1.innerText = `${cnt}`;
+            checkColor();
+        })
+
+        
+    </script>
+</body>
+</html>

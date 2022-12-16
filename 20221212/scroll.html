@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 300vh;
+            background: linear-gradient(to bottom, rgb(255, 153, 170), rgb(149, 137, 255));
+        }
+
+        div{
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <button>상단에서300px 아래로</button>
+        <button>100px 아래로</button>
+        <button>100px 위로</button>
+    </div>
+
+    <script>
+        const button = document.querySelectorAll('button');
+        const button1 = button[0];
+        const button2 = button[1];
+        const button3 = button[2];
+
+        button1.addEventListener('click', ()=>{
+            window.scrollTo(0, 300);
+            //px을 안 쓰고 숫자만 쓰는게 특이사항
+            //scrollTo < 특정 위치로 이동
+            //scrollBy < 현재 위치에서 위치값 변경
+            console.log(window.scrollY);
+        })
+
+        button2.addEventListener('click', ()=>{
+            window.scrollBy(0, 100);
+        })
+
+        button3.addEventListener('click', ()=>{
+            window.scrollBy(0, -100);
+        })
+
+    </script>
+</body>
+</html>

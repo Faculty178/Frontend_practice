@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+       document.addEventListener('DOMContentLoaded', ()=>{
+            const div = document.querySelectorAll('div');
+
+           
+            div.forEach((box)=> {
+                let dEvent = box.getAttribute('data-event');
+                let bg = box.getAttribute('data-color');            
+                box.addEventListener(dEvent, (e)=>{
+                    e.currentTarget.style.background = bg;
+                })
+            })
+
+            out.forEach(box2 =>{
+                let dEvent2 = box.getAttribute('data-event2');
+                box2.addEventListener(dEvent2, (e)=>{
+                    e.currentTarget.style.background = 'transparent';
+                })
+            })
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+    <div data-event="click" data-color="red">클릭</div>
+    <div data-event="dblclick" data-color="green">더블클릭</div>
+    <div class="out" data-event="mousedown" data-event2="mouseup" data-color="blue">눌렀다떼기</div>
+    <div class="out" data-event="mouseover" data-event2="mouseout" data-color="orange">마우스진입</div>
+
+    
+</body>
+</html>

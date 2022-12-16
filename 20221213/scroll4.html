@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 100vh;
+
+        }
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section:first-child{
+            background-color: lightgreen;
+        }
+        section:nth-child(2){
+            background-color: lightblue;
+        }
+        section:last-child{
+            background-color: lightseagreen;
+        }
+        h1{
+            font-size: 100px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    
+    <section>
+        <h1>Section1</h1>
+    </section>
+    <section>
+        <h1>Section2</h1>
+    </section>
+    <section>
+        <h1>Section3</h1>
+    </section>
+
+    <script>
+         const sec = document.querySelectorAll('section');
+            const heading = document.querySelectorAll('h1');
+            let winH = window.innerHeight;
+            window.addEventListener('scroll', ()=> {
+                if (window.scrollY >= winH) {
+                    heading[0].style.opacity = 1;
+                }
+                if (window.scrollY >= winH*2) {
+                    heading[1].style.opacity = 1;
+                }
+                if (window.scrollY >= winH*3) {
+                    heading[2].style.opacity = 1;
+                }
+            })
+
+
+    </script>
+</body>
+</html>
