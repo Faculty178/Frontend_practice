@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #000; }
+/* gallery */
+#gallery { position: relative; width: 400px; 
+            margin: 50px auto 0; padding: 20px 50px; 
+            border: 1px solid #000; text-align: center; }
+#photo { width: 400px; margin-top: 20px; }
+/* 썸네일리스트 */
+#photoWrap { overflow: hidden; width: 300px; margin: 20px auto 0; }
+#photoList { display: flex; width: 800px; }
+#photoList li { width: 100px; }
+/* 썸네일버튼 */
+#btnWrap a { position: absolute; bottom: 23px; font-size: 50px; }
+#btnWrap .prev { left: 50px; }
+#btnWrap .next { right: 50px; }
