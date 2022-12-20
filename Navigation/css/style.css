@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+#header { position: absolute; z-index: 999; width: 100%; height: 80px;
+    display: flex; justify-content: center;
+    background: rgb(39, 31, 25); }
+#header h1 { position: absolute; top: 20px; left: 20px; color: #fff;  }
+/* 네비 */
+#gnbList { display: flex; padding-top: 35px; }
+#gnbList > li { overflow: hidden; height: 45px; text-align: center;  }
+#gnbList > li > a { display: block; width: 170px; height: 45px; 
+                font-size: 18px;
+                color: #fff; }
+/* snb */
+.snb { padding: 10px 0; background: rgb(240, 180, 51); opacity: 0; transition: 0.5s; }
+.snb li { line-height: 50px; }
+.snb li a { color: #000; }
+/* 비디오 */
+#videoWrap { overflow: hidden; position: relative; width: 100%; height: 100vh; }
+#videoWrap video { position: absolute; 
+            top: 0; 
+            left: 50%;
+            /* margin-left: -960px; */
+            transform: translateX(-50%);
+            min-width: 1920px;
+            min-height: 100%;  
+            filter: brightness(60%);
+        }
