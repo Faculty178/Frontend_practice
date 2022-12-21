@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+#sliderWrap{
+    margin: 0 auto;
+    width: 400px;
+    overflow-x: hidden;
+}
+
+#sliderList{
+    display: flex;
+    transition: 1s transform;
+}
+
+#sliderList li{
+    width: 400px;
+    height: 400px;
+    min-width: 400px;
+   
+}
+
+#sliderList .list1{
+    background-color: salmon;
+}
+
+#sliderList .list2{
+    background-color: rgb(255, 231, 96);
+}
+
+#sliderList .list3{
+    background-color: rgb(137, 255, 137);
+}
+
+#sliderList .list4{
+    background-color: dodgerblue;
+}
