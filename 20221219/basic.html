@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: lightyellow;
+        }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.2.js"></script> -->
+    <script src="../../jquery-3.6.2.min.js"></script>
+</head>
+<body>
+
+    <button>Click!</button>
+    
+    <div>
+
+    </div>
+    
+
+    <script>
+        // const btn = document.querySelector('button');
+        // const div = document.querySelector('div');
+
+        // btn.addEventListener('click', ()=>{
+        //     console.log('hello Javascript!');
+        //     div.style.backgroundColor = 'salmon';
+        // })
+
+        $('button').on('click', function(){
+            console.log('hello jquery');
+            $('div').css('backgroundColor', 'deepskyblue');
+        })
+
+    </script>
+    <script src="./common.js" defer async></script>
+
+    
+
+</body>
+</html>

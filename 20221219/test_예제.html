@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../../jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          //$("#content1")를 기준으로 pink
+          //$(".doc")를 기준으로 skyblue
+          //$("#list")를 기준으로 red
+        });
+    </script>
+</head>
+<body>
+    <div id="content1">
+        <h1>Lorem Ipsum</h1>
+        <div class="doc">
+            <h1>jQuery Start</h1>
+            <p>Lorem Ipsum is simply...</p>
+        </div>
+        <p>Lorem Ipsum is simply...</p>
+    </div>
+
+    <div id="content2">
+        <ul id="list">
+            <li>Lorem Ipsum1</li>
+            <li>Lorem Ipsum2</li>
+            <li>Lorem Ipsum3</li>
+        </ul>
+    </div>
+
+
+    <script>
+        $('#content1').find(".doc p").css('background', 'pink');
+        //children children도 길어서 딱히 원하시는 답은 아니신 듯...? 
+
+        $('.doc').parent().parent().find('#list').css('background', 'skyblue');
+        //왜 굳이 doc에서...싶긴 한데 넘어가는것으로 
+        // $(".doc").parent().next().children().css('background', 'skyblue');
+
+        $('#list').parent().prev().find('.doc h1').css('color', 'red');
+    </script>
+
+</body>
+</html>
