@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> wrap( )  </title>
+<!-- jQuery library -->
+<script src="../jquery-3.6.2.js"></script>
+</head>
+ 
+<body>
+
+	<strong>제목이 되고 싶어요</strong>
+	<em>제목이 되기 싫어요</em>
+	<strong>제목이 되고 싶어요</strong>
+	<!--  <strong>제목이 되고 싶어요 </strong>-->
+
+	<!---------- jQuery code Start ---------->
+	<script>
+
+		// wrap()는 선택된 요소를 지정된 html 구조로 각각 감싼다
+
+		// strong 태그 각각을 h1 태그로 감싼다
+		// $("strong").wrap("<h1>");
+			$("strong").wrapAll("<h1>");
+		//em은 알아서 튕겨나감 
+		$("strong, em").wrapAll("<h1>");
+			//같이 묶임 
+
+	</script>
+ 
+ 
+ 
+ 
+
+</body>
+</html>
