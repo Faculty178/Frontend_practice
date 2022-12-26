@@ -1,0 +1,535 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+/*font-family: 'Nanum Myeongjo', serif; 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hidden{
+    text-indent: -999px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* div{
+    border: 1px solid black;
+} */
+
+#header{
+    height: 330px;
+    padding-top: 10px;
+}
+
+#header h1{
+    width: 1280px;
+    height: 250px;
+    margin: 0 auto;
+    color: transparent;
+
+    background-image: url(../images/html5Logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#gnb{
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid grey;
+   
+}
+
+#gnb ul{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: white;
+}
+
+#gnb ul li{
+    width: 25%;
+    height: 100%;
+    transition:all .3s ease;
+    position: relative;
+}
+
+#gnb ul li:hover { 
+    color:salmon; 
+    transition:all 0.5s ease;
+ }
+
+#gnb ul li a::after{
+    content:""; 
+    width: 0%;
+    left: 50%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    margin-top: 3px;
+    border-bottom: 3px solid salmon;
+    transition:all 0.5s ease;
+    bottom: 5px;
+}
+
+#gnb ul li a:hover::after {
+    content: '';
+    width: 100%;
+    left: 0px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    margin-top: 3px;
+    border-bottom: 3px solid salmon;
+    transition:all 0.5s ease;
+}
+
+#gnb ul li a{
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+#gnb ul li a:hover{
+    color: salmon;
+}
+
+
+/*Main*/
+
+#event{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+#event ul{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 300%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#event ul li{
+    width: calc(100% / 3);
+    height: 100%;
+    transition: 1s ease;
+    overflow: hidden;
+}
+
+#event ul li div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#event ul li div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.452);
+    position: absolute;
+    top:0; left:0;
+    z-index: -1;
+}
+
+#event ul li div p{
+    font-size: 36px;
+    color: white;
+    z-index: 5;
+    line-height: 800px;
+}
+
+#event ul li div button{
+    border:none;
+    outline: none;
+    background-color: rgb(255, 94, 0);
+    color:white;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    z-index: 5;
+    position: relative;
+    top:-40%; 
+}
+
+#slider1{
+    background-image: url(../images/slider1.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#slider2{
+    background-image: url(../images/slider2.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#slider3{
+    background-image: url(../images/slider3.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#pagination{
+    position: absolute;
+    bottom:50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    max-width: 385px;
+    margin: 0 auto;
+
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    z-index: 5;
+}
+
+#pagination a{
+    display: block;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 28%;
+    background: white;
+    height: 10px;
+}
+
+#pagination a:first-child{
+    background-color: rgb(255, 94, 0);
+}
+
+/*Event아래부터*/
+
+
+#introduction{
+    width: 100%;
+   
+}
+
+#quotes{
+    width: 100%;
+    height: 380px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(235, 235, 235);
+}
+
+#quotes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+#quotes h2{
+    width: 100%;
+}
+
+#quotes p{
+    max-width: 600px;
+    text-align: left;
+    margin-right: 90px;
+}
+
+#quotes img{
+    width: 166.5px;
+    height: 192px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*blockquote*/
+
+#introduction div:nth-child(2){
+    background-color: white;
+    height: 300px;
+    margin-top: 100px;
+}
+
+#introduction div:nth-child(2) blockquote::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin: 30px auto;
+
+    background-image: url(../images/quot-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#introduction div:nth-child(2) blockquote{
+    font-family: 'Nanum Myeongjo';
+    font-weight: 700;
+    font-style: italic;
+    color:rgb(255, 153, 0);
+    line-height: 35px;
+}
+
+#introduction div:nth-child(2) blockquote::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin: 30px auto;
+
+    background-image: url(../images/quot-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#introduction div:nth-child(2) blockquote cite{
+    color: rgb(187, 187, 187);
+    margin-top: 15px;
+    font-weight: 700;
+    font-family: 'Nanum Myeongjo';
+}
+
+/*이미지 박스*/
+#introduction div:last-child{
+    height: 750px;
+    max-width: 1280px;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: auto auto;
+    padding: 40px 120px 40px 120px;
+    gap: 40px;
+}
+
+#introduction div:last-child p{
+    background-position-y: center;
+    object-fit: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#images{
+    margin: 0 auto;
+}
+
+#images p::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.575);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+#images p a{
+    color: white;
+    font-size: 26px;
+    z-index: 2;
+}
+
+#images p:first-child{
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    background-image: url(../images/list1.jpg);
+    background-position-x: -500px;
+    background-repeat: no-repeat;
+}
+
+#images p:nth-child(2){
+    background-image: url(../images/list2.jpg);
+    background-repeat: no-repeat;
+}
+
+#images p:last-child{
+    background-image: url(../images/list3.jpg);
+    background-repeat: no-repeat;
+}
+
+/*교육 프로그램*/
+
+#programs{
+    width: 100%;
+    height: 450px;
+    background-color: rgb(235, 235, 235);
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#programs h2{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#box_wrap{
+    max-width: 1280px;
+    height: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#box_wrap div{
+    max-width: 18%;
+    height: 100%;
+    border: 1px solid rgb(102, 102, 102);
+    background-color: white;
+    padding: 25px;
+    overflow: hidden;
+}
+
+#box_wrap div h3{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#box_wrap div p{
+    text-align: left;
+    font-size: 14px;
+}
+
+#top{
+    width: 100%;
+    height: 30px;
+    z-index: 5;
+    position: absolute;
+}
+
+#top a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -999px;
+    overflow: hidden;
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+}
+
+#top::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-right: 0;
+    border-bottom: 0;
+    position: absolute;
+    transform: rotate(45deg);
+
+    position: absolute;
+    right: 30px;
+    bottom: 55px;
+    z-index: 5;
+}
+
+
+/*Footer*/
+
+#footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(56, 73, 95);
+}
+
+#footer_wrap{
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+#footer_wrap dl{
+    width: 400px;
+    /* border: 1px solid white; */
+    padding-top: 50px;
+}
+
+#footer_wrap dl dt{
+    height: 0;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+#footer_wrap dl dd{
+    color: white;
+    text-align: left;
+}
+
+#footer_wrap > div{
+    width: 300px;
+}
+
+#footer_wrap > div ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+}
+
+#footer_wrap > div ul li{
+    width: 32px;
+    height: 32px;
+
+    text-indent: -999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#footer_wrap > div ul li:not(last-child){
+    margin-right: 30px;
+}
+
+#footer_wrap > div ul li:first-child{
+    background-image: url(../images/fb.png);
+}
+
+#footer_wrap > div ul li:nth-child(2){
+    background-image: url(../images/tw.png);
+}
+
+#footer_wrap > div ul li:nth-child(3){
+    background-image: url(../images/ytube.png);
+}
+
+#footer_wrap > div ul li:last-child{
+    background-image: url(../images/gp.png);
+}
