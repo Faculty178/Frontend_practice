@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>live()</title>
+    <script src="../jquery-3.6.2.min.js"></script>
+</head>
+<body>
+
+    <button>li 요소를 추가</button>
+
+    <ul>
+        <li><a href="../flower.jpg"> 꽃</a></li>
+        <li><a href="../sea.jpg"> 바다</a></li>
+        <li><a href="../jellyfish.jpg"> 해파리</a></li>
+    </ul>
+
+    <p><img src="../flower.jpg" alt=" 꽃" /></p>
+
+    <!---------- jQuery code Start ---------->
+    <script type="text/javascript">
+
+        // 버튼 클릭시 건물이미지 리스트를 추가하고, a 이벤트가 적용되도록
+
+        $(document).on('click','li a', function(e) {
+			e.preventDefault();
+			let imgPath = $(this).attr('href');
+			let altText = $(this).text();
+			$("p img").attr({ src: imgPath, alt: altText })
+		})
+		
+		$('button').one('click', ()=>{
+			$('ul').append(`<li><a href="../building.jpg">건물</a></li>`);
+		})
+
+       
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
