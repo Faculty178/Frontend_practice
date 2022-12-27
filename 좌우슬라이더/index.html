@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>slider</title>
+        <meta name="description" content="Slider">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+       
+        <section id="sliderWrap">
+            <h2 class="hidden">Title Slider</h2>
+            <ul id="sliderList">
+                <li class="slider slider1"><div>Slider1</div></li>
+                <li class="slider slider2"><div>Slider2</div></li>
+                <li class="slider slider3"><div>Slider3</div></li>
+                <li class="slider slider4"><div>Slider4</div></li>
+            </ul>
+            <div id="btnPos">
+                <a href="#" class="prevBtn"><span>이전슬라이더</span></a>
+                <a href="#" class="nextBtn"><span>다음슬라이더</span></a>
+            </div>
+            <div id="btnNum">
+                <a href="#" data-index="1" class="on"><span>1</span></a>
+                <a href="#" data-index="2"><span>2</span></a>
+                <a href="#" data-index="3"><span>3</span></a>
+                <a href="#" data-index="4"><span>4</span></a>
+            </div>
+        </section>
+        
+       
+        <script src="./js/jquery-3.6.2.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+        <script src="./js/app.js" async defer></script>
+    </body>
+</html>
