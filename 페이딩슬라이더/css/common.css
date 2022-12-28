@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* 초기화 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+.hidden { position: absolute; width: 1px; height: 1px;
+        margin: -1px;  overflow: hidden;
+        clip-path: polygon(0 0, 0 0, 0 0); }
+/* 슬라이더 */
+#sliderWrap { position: relative; width: 100%; height: 700px; }
+#sliderList { width: 100%; }
+#sliderList .slider { width: 100%; min-width: 100%; height: 700px; 
+                      background: no-repeat center / cover; 
+                      font-size: 70px; color: #fff; ;
+                        position: absolute;
+                        top:0; left:0;
+                }
+#sliderList .slider1 { background-image: url(../images/slider1.jpg); }
+#sliderList .slider2 { background-image: url(../images/alcohol-1961542.jpg); }
+#sliderList .slider3 { background-image: url(../images/cold-5783718.jpg); }
+#sliderList .slider4 { background-image: url(../images/hd-wallpaper-201496.jpg); }
+#sliderList .slider > div { width: 1200px; margin: 0 auto; }
+#sliderList .active{
+        z-index: 9;
+}
+/* 좌우버튼 */
+#btnPos a { position: absolute; top: calc(50% - 50px); 
+            width: 50px; height: 70px; 
+            background: #000; color: #fff;
+            font-size: 70px; line-height: 40px; 
+            text-align: center; 
+            z-index: 10;
+        }
+#btnPos a.prevBtn { left: 100px; }
+#btnPos a.prevBtn::after { content: "<"; }
+#btnPos a.nextBtn { right: 100px;  }
+#btnPos a.nextBtn::after { content: ">"; }
+/* 번호버튼 */
+#btnNum { position: absolute; bottom: 50px; width: 100%;
+          display: flex; justify-content: center; z-index: 10;}
+#btnNum a { display: block; width: 50px; height: 50px; margin: 0 10px; 
+            border-radius: 50%; background: #000; color: #fff; 
+            font-size: 30px; text-align: center; line-height: 50px; }
+#btnNum a::after { content: attr(data-index); }
+/* #btnNum a:nth-child(1)::after { content: "1"}
+#btnNum a:nth-child(2)::after { content: "2"}
+#btnNum a:nth-child(3)::after { content: "3"}
+#btnNum a:nth-child(4)::after { content: "4"} */
+#btnNum a.on { background: #ff0; color: #000;  }

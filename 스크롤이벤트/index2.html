@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Scroll Event</title>
+        <meta name="description" content="blahblahblah">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style/style2.css">
+        <script src="../../jquery-3.6.2.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h3>Header</h3>
+        </header>
+
+        <main>
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            <section>4</section>
+        </main>
+
+        <footer>
+            <h3>Footer</h3>
+        </footer>
+        
+        <script>
+
+            let scrollPoint = $(window).height() - 200;
+            let state = 1;
+
+            $(window).on('scroll', function(){
+                if($(this).scrollTop() > scrollPoint && state === 1){
+                    state = 0;
+                    $('section').each(function(){
+                        let timing = $(this).index()*200;
+                        $(this).delay(timing).animate({opacity:1, top:"30%"}, 1000);
+                    })
+                }
+                else if($(this).scrollTop() < 300 && state === 0){
+                    state = 1;
+                    $('section').css({opacity:0, top:"70%"});
+                }     
+            })
+          
+        </script>
+</html>
