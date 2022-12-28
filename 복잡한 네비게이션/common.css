@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, blockquote, figure, form, fieldset, input, table, th, td { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #000; }
+fieldset, img { border: 0 }
+address { font-style: normal; }
+table { border-collapse: collapse; }
+body { background: #9491e4; }
+/* 헤더 */
+#header { position: absolute; top: 0; width: 100%; z-index: 999; }
+#header h1 { position: absolute; top: 20px; left: 50px; }
+#header .viewMenu { position: absolute; top: 30px; right: 50px; }
+/* gnb  */
+#gnb { overflow: hidden; }
+#gnbList .item > a { display: block; }
+
+/* 1000 이상 - pc버전 */
+@media screen and (min-width: 1000px) {
+    #header .viewMenu { display: none; }
+    #gnb { position: absolute;  top: 0; left: 0; width: 100%;  
+           background: rgba(255, 255, 255, 0.9); 
+           height: 80px; padding-top: 30px; 
+           transition: 1s;
+           transition-property:none;
+    }
+    #gnb.on { height: 300px; background: #c4ecf2; 
+    }
+    #gnbList { display: flex; justify-content: center;
+               height: 50px; border-bottom: 5px solid rgb(0, 0, 0);  }
+    #gnbList .item > a { padding: 0 50px; height: 50px; }
+    .snb { text-align: center; }
+    .snb li { line-height: 50px; }
+    .closeMenu { display: none; }
+}
+/* 999 이하 - 모바일버전 */
+@media screen and (max-width: 999px) {
+    #header h1 a { color: #fff; }
+    #header .viewMenu {color: #fff;  }
+    #gnb { position: fixed; top: 0; right: -200px; z-index: 1000;
+            width: 200px; height: 100vh; 
+            background: #cbf8ff;
+            transition: 0.5s right;  }
+    #gnb.on2 { right: 0; }
+    #gnbList { padding-top: 50px; }
+    #gnbList .item { line-height: 50px;  }
+    .snb { display: none; }
+    .closeMenu { position: absolute; top: 20px; right: 20px; }
+}
