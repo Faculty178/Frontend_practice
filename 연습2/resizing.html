@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                margin: 0;
+            }
+            /* section{
+                width: 1000px;
+            } */
+            div{
+                width: 50%;
+                background-color: salmon;
+            }
+        </style>
+        <script src="../../jquery-3.6.2.min.js"></script>
+    </head>
+    <body>
+        <section>
+            <div></div>
+        </section>
+       
+        
+        
+        <script>
+            function divSizing(){
+                let divH = $('div').width() / 2;
+                $('div').height(divH);
+            }
+            divSizing();
+            $(window).on('resize', divSizing);
+
+        </script>
+    </body>
+</html>
