@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+  <ul id = 'fruits'>
+    <li>APPLE</li>
+    <li>BANANA</li>
+    <li>ORANGE</li>
+  </ul>
+
+    <div id = "foo">HELLO</div>
+
+    <div id = "inner">
+        <div>INNER1</div>
+        <div style="visibility: hidden ">INNER2</div>
+    </div>
+</body>
+</html>
+
+<script>
+    //요소 노드의 텍스트 조작
+    //nodeValue: setter / getter 모두 가능
+    //nodeValue => 텍스트 노드가 아닌 노트, 문서 노드나 요소 노드의 nodeValue를 참조하면 null 반환
+    //1. 텍스트를 변경할 요소 노드를 취득한다.
+    //2. 텍스트 노드는 요소 노트에서 자식노드로서 존재하므로 자식노드로서 가져온다.
+    //3. 해당 노드의 값을 nodeValue를 사용하여 변경한다.
+    const fruits = document.getElementById('fruit');
+    let value = fruits.lastElementChild.nodeValue;
+    console.log(value);
+
+    const foo = document.getElementById('foo');
+    console.log(foo.nodeValue); //null
+    const fooTextNode = foo.firstChild;
+    console.log(fooTextNode.nodeValue);
+    fooTextNode.nodeValue = '변경되었음';
+
+    //textContent
+    //setter / getter가 모두 가능
+    //요소 노드의 텍스트와 모든 자손 노드의 텍스트를 모두 취득하거나 변경함.
+    //HTML 마크업은 무시된다.
+    const textContent = fruits.textContent;
+    console.log(textContent);
+    //모든 자식 노드가 제거되고 할당한 문자열이 텍스트로 추가된다.
+    //html처럼 작성해도 그냥 문자열로 취급
+    fruits.textContent = '<p>여기도 변경되었음</p>';
+
+    //innerText
+    //CSS에 의해 비표시로 지정된 요소노드의 텍스트를 반환하지 않음
+    //CSS를 고려해야 하기 때문에 textConent보다 느림(안쓰는게좋음)
+    console.log(fruits.innerText);
+    const inners = document.getElementByID('inner');
+    console.log('textContent', inners.textContent);
+    console.log('innerText:', inners.innerText);
+
+
+    const insertUL = document.getElementById('insertUL');
+    insertUL.insertAdjacentHTML("beforebegin", '<li>추가된 요소!</li>');
+
+    //innerHTML
+    //setter / getter 모두 존재
+    //HTML 마크업을 취득하거나 변경. 따라서 문자열로 작성한 부분이 HTML 파싱된다.
+    console.log('innerHTML: ', inners.innerHTML);
+    inners.innerHTML += '<p>변경됨</p>';
+    //크로스 사이트 스크립팅 공격 때문에 많이 사용하면 안된다
+    inners.innerHTML += '<script>alert("test")</script>';
+    // +=하는 이유:기존에 있는거에 이어서 추가로 하고싶기 때문
+    // insertAdjacentElement(position, DOMString)
+    // 기존 요소를 제거하지 않으면서 위치를 지정해 새로운 요소를 삽입함
+    // position:
+    //"afterbegin"요소가 시작되는 부분(시작하고 난 바로 후 - 첫번째 자식 위치로
+    //"afterend"요소가 끝나고 난 후 - 자신의 다음 요소로
+    //"beforebegin"요소가 시작하기 전 - 자신의 이전 요 소로
+    //"beforeendd"요소가 끝나기 전 - 마지막 자식 위치로
+    const insertUL = document.getElementById('insertUL');
+
+</script>

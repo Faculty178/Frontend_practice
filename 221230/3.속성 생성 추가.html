@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>속성값 변경</title>
+</head>
+  <style>
+    span[active]{
+      color: red;
+    }
+    div.a {
+      color: blue;
+    }
+    div.b {
+      font-size: x-large;
+    }
+    div.c {
+      font-weight: bold;
+    }
+
+  </style>
+
+<body>
+  <span id = "first">S1</span>
+  <span id = "em">S2</span>
+  <span id = "emm">S3</span>
+  <span>S4</span>
+
+  <div class = "a">A</div>
+  <div class = "a b">AB</div>
+  <div class = "a b c">ABC</div>
+  <div>NONE</div>
+</body>
+</html>
+
+<script>
+  const [s1, s2, s3, s4] = document.getElementsByTagName('span');
+  console.log(s1.getAttribute('id'));
+  s1.id = 'test';
+  s1.setAttribute('id', 'newID');
+  console.log(s2.hasAttribute('id'));
+  s3.removeAttribute('class');
+  s4.setAttribute('name', 's4');
+  s4.id = 's4ID';
+
+  //toggleAttribute: active라는 속성이 존재하지 않으면 추가하고, 존재하면 삭제함. true가 있으면 강제로 넣어줌
+  s1.toggleAttribute('active', true);
+
+  let spans = document.getElementsByTagName('span');
+  for(let i = 0; i < spans.length; i++){
+    spans.item(i).toggleAttribute('active');
+  }
+
+  const divs = document.getElementsByTagName('div');
+  divs.item(0).classList.add('c', 'd')
+  console.log(divs.item(2).classList.item(0));
+
+
+
+
+
+</script>

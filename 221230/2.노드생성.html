@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div></div>
+  <ul>
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+  </ul>
+</body>
+</html>
+
+  <script>
+    const div = document.getElementsByTagName('div').item(0);
+    const inputTag = document.createElement('input');
+    console.log(inputTag);
+    //document.body.appendChild(inputTag);
+    //document.body.insertAdjacentElement('beforeend', inputTag);
+    document.body.insertBefore(inputTag, div);
+
+
+    //html에 list4를 추가하는 방법
+    //1. ul의 자식으로 추가한다.
+    const ul = document.getElementsByTagName('ul').item(0);
+    console.log(ul);
+    //li 추가하는 방법
+    //1)li를 내가 만들어서 추가한다.
+    //1-1) 문자열로 만든다.
+    //1-1)'<li>list4</>li>
+    ul.insertAdjacentHTML('beforeend', '<li>list4</li>');
+    //1-2) element로 만든다.
+    const li = document.createElement('li');
+    li.textContent = 'list5';
+    ul.insertAdjacentElement('beforeend', li);
+    //2)기존에 있던 li를 복사해서 추가한다
+    //cloneNode(): 얕은 복사. 해당 NODE만 복사하고 하위 NODE는 복사하지 않음
+    //cloneNode(true): 깊은 복사. 해당 NODE 뿐만ㅇ 아니라 하위 NODE까지 모두 복사
+    const firstLi = ul.firstElementChild.cloneNode(true);
+    firstLi.textContent = 'list6';
+    ul.appendChild(firstLi);
+    //2. ul의 마지막 li  자식의 다음 요소로 추가한다.
+    //firstLi => 현재 ul의 마지막 li자식
+    //3. ul의 내용을 새로 싹 바꾼다. => body안에 있는 ul을 싹 바꾼다.
+    ul.innerHTML += '<li>list7</li>';
+
+
+
+
+
+
+
+
+
+
+  </script>
